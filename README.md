@@ -22,7 +22,7 @@ Sistem iki temel bileşenden oluşur:
 ## 📸 Ekran Görüntüleri
 
 <!-- Buraya projenin çalışırken alınmış bir ekran görüntüsünü ekleyin -->
-![Dashboard Ekran Görüntüsü]("C:\Users\yasin\Pictures\Screenshots\Ekran görüntüsü 2026-05-09 160117.png")
+![Dashboard Ekran Görüntüsü](https://github.com/yasinalparslan226-cell/Kestirimci-Bak-m-Predictive-Maintenance-/blob/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-05-09%20160117.png)
 
 ## 💻 Kullanılan Teknolojiler
 
