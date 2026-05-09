@@ -22,7 +22,7 @@ Sistem iki temel bileşenden oluşur:
 ## 📸 Ekran Görüntüleri
 
 <!-- Buraya projenin çalışırken alınmış bir ekran görüntüsünü ekleyin -->
-![Dashboard Ekran Görüntüsü](ekran_goruntusu_linki_buraya_gelecek.jpg)
+![Dashboard Ekran Görüntüsü]("C:\Users\yasin\Pictures\Screenshots\Ekran görüntüsü 2026-05-09 160117.png")
 
 ## 💻 Kullanılan Teknolojiler
 
