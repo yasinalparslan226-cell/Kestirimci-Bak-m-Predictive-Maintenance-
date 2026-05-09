@@ -1,0 +1,80 @@
+﻿<Window x:Class="AkilliAracDashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Automotive Data &amp; IoT | Dijital İkiz Paneli" Height="500" Width="850"
+        Background="#0A0A0A" FontFamily="Montserrat, Poppins, Segoe UI">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Üst Başlık -->
+        <TextBlock Grid.Row="0" Text="KESTİRİMCİ BAKIM SİSTEMİ" Foreground="#FFFFFF" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <!-- Sensör Verileri ve Durum Paneli -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Sol Taraf: Sensör Verileri -->
+            <StackPanel Grid.Column="0" Margin="0,0,20,0">
+                <Border Background="#1A1A1A" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Motor Sıcaklığı:" Foreground="#A0A0A0" FontSize="18" Width="150"/>
+                        <TextBlock x:Name="txtTemp" Text="0 °C" Foreground="#00E5FF" FontSize="18" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#1A1A1A" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Motor Devri (RPM):" Foreground="#A0A0A0" FontSize="18" Width="150"/>
+                        <TextBlock x:Name="txtRpm" Text="0 RPM" Foreground="#00E5FF" FontSize="18" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#1A1A1A" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Titreşim Seviyesi:" Foreground="#A0A0A0" FontSize="18" Width="150"/>
+                        <TextBlock x:Name="txtVibration" Text="0.0 g" Foreground="#00E5FF" FontSize="18" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#1A1A1A" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Yağ Basıncı:" Foreground="#A0A0A0" FontSize="18" Width="150"/>
+                        <TextBlock x:Name="txtOil" Text="0 PSI" Foreground="#00E5FF" FontSize="18" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <!-- Sağ Taraf: Yapay Zeka Kararı -->
+            <Border Grid.Column="1" Background="#1A1A1A" CornerRadius="12" Padding="20">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="SİSTEM DURUMU" Foreground="#A0A0A0" FontSize="16" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+                    <!-- Renk değiştirecek durum göstergesi -->
+                    <Border x:Name="StatusIndicator" Width="120" Height="120" CornerRadius="60" Background="#00C853" Margin="0,0,0,20">
+                        <TextBlock x:Name="txtStatusIcon" Text="OK" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+
+                    <TextBlock x:Name="txtRisk" Text="Arıza Riski: %0" Foreground="#FFFFFF" FontSize="20" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="txtMessage" Text="Sistem normal çalışıyor." Foreground="#A0A0A0" FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- Alt Kontrol -->
+        <Button Grid.Row="2" x:Name="btnSimulate" Content="SİMÜLASYONU BAŞLAT" Background="#0078D7" Foreground="White" FontSize="16" FontWeight="Bold" Height="45" BorderThickness="0" Margin="0,20,0,0" Click="btnSimulate_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="8"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
